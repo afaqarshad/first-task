@@ -13,8 +13,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   List pages = [
-    const ListViewWidget(),
-    const ListViewBuilder(),
+    ListViewWidget(),
+    ListViewBuilder(),
     const SingleChildScrol(),
   ];
 

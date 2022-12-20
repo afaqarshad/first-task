@@ -1,19 +1,20 @@
+import 'package:first_task/api_data.dart';
 import 'package:first_task/widgets/cards.dart';
 import 'package:flutter/material.dart';
 
 class ListViewBuilder extends StatelessWidget {
-  const ListViewBuilder({super.key});
+  var ListItems = shoppingListItems;
+  ListViewBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: 12,
+        itemCount: ListItems.length,
         itemBuilder: (BuildContext context, index) {
-          return const CardWidget(
-              title: 'Apples',
-              subTitle:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-              price: 3.009);
+          return CardWidget(
+              title: ListItems[index]['name'],
+              subTitle: ListItems[index]['description'],
+              price: ListItems[index]['price']);
         });
   }
 }

@@ -21,8 +21,8 @@ class CardWidget extends StatelessWidget {
               Icons.person,
               color: Colors.white,
             )),
-        title: Text(title),
-        subtitle: Text(subTitle),
+        title: Text(title.toString()),
+        subtitle: Text(subTitle.toString()),
         trailing: Text(
           price.toString(),
           style: const TextStyle(color: Colors.green),
